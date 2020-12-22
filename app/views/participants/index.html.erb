@@ -1,0 +1,20 @@
+<h1> index page </h1>
+
+<%=link_to "Add Participant",new_participant_path%>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </tr>
+    <% @participants.each do |p| %>
+        <tr>
+            <th><%= p.id %></th>
+            <th><%= p.name %></th>
+            <th><%= p.age %></th>
+            <th><%= p.gender %></th>
+        </tr>
+    <% end %>
+</table>
+
